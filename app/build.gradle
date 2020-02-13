@@ -6,13 +6,13 @@ apply plugin: 'kotlin-kapt'
 android {
 
     // Declaration app name
-    def nameApp = "Lagu Offline Hindia - Topik"
+    def nameApp = "Base-Webview"
 
     // Declaration apk / aab name
-    def nameAPK = "lagu-hindia-offline"
+    def nameAPK = "base-webview"
 
     // Declaration Room DB Name
-    def nameDB = '"lagu_hindia_oflline.db"'
+    def nameDB = '"base_webview.db"'
 
     def versionPropsFile = file('version.properties')
     Properties versionProps = new Properties()
