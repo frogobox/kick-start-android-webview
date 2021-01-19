@@ -10,10 +10,14 @@ import kotlinx.android.synthetic.main.ads_phone_tab_special_smart_banner.*
 
 class MainActivity : BaseActivity() {
 
+    companion object {
+        private const val URL_LINK_WEBSITE = "https://disporaparbud.probolinggokab.go.id/"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setupWebView(BuildConfig.URL_LINK_WEBSITE)
+        setupWebView(URL_LINK_WEBSITE)
         setupShowAdsBanner(ads_phone_tab_special_smart_banner)
         setupShowAdsInterstitial()
     }
@@ -31,5 +35,7 @@ class MainActivity : BaseActivity() {
         main_webview.webViewClient = WebViewClient()
         main_webview.loadUrl(url)
     }
+
+
 
 }
