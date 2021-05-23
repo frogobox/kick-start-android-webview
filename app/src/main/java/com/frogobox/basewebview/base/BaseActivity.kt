@@ -2,14 +2,12 @@ package com.frogobox.basewebview.base
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.view.WindowManager
+import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.frogobox.admob.core.admob.FrogoAdmobActivity
 import com.frogobox.basewebview.R
-import com.frogobox.frogoadmobhelper.FrogoAdmobActivity
+import com.frogobox.basewebview.databinding.ActivityMainBinding
 
 /**
  * Created by Faisal Amir
@@ -30,9 +28,16 @@ import com.frogobox.frogoadmobhelper.FrogoAdmobActivity
  */
 open class BaseActivity : FrogoAdmobActivity() {
 
+    protected lateinit var mainBinding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupAdmob()
+        setupViewBinding()
+    }
+
+    private fun setupViewBinding() {
+        mainBinding = ActivityMainBinding.inflate(baseLayoutInflater())
     }
 
     private fun setupAdmob(){
@@ -134,5 +139,8 @@ open class BaseActivity : FrogoAdmobActivity() {
         }
     }
 
+    protected fun baseLayoutInflater() : LayoutInflater {
+        return LayoutInflater.from(this)
+    }
 
 }
