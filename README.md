@@ -18,10 +18,10 @@ What's New??
 
 ## How To Use / Implement This Project
 
-### 1. Setup Build Gradle
+### Step 1. Setup Build Gradle
 ![ScreenShoot Apps](docs/image/ss_project_1.png?raw=true)
 
-### 2. Setup Link URL
+### Step 2. Setup Link URL
 ![ScreenShoot Apps](docs/image/ss_project_2.png?raw=true)
 
 ## Library
