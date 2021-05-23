@@ -18,6 +18,15 @@ What's New??
 
 ## How To Use / Implement This Project
 
+### Setup Build Gradle
+![ScreenShoot Apps](docs/image/ss_project_1.png?raw=true)
+
+### Setup Link URL
+![ScreenShoot Apps](docs/image/ss_project_2.png?raw=true)
+
+## Library
+- frogo-admob [Click Here](https://github.com/amirisback/frogo-admob)
+- frogo-log [Click Here](https://github.com/amirisback/frogo-log)
 
 ## Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me
