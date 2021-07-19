@@ -1,4 +1,4 @@
-package com.frogobox.basewebview
+package com.frogobox.webview
 
 import org.junit.Test
 

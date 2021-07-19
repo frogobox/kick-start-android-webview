@@ -1,27 +1,32 @@
-package com.frogobox.basewebview
+package com.frogobox.webview
 
 import android.os.Bundle
 import android.view.View.SCROLLBARS_INSIDE_OVERLAY
 import android.webkit.WebViewClient
-import com.frogobox.basewebview.base.BaseActivity
+import com.frogobox.webview.databinding.ActivityMainBinding
 
 
-class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     companion object {
         private const val URL_LINK_WEBSITE = "https://github.com/amirisback"
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(mainBinding.root)
+    override fun setupViewBinding(): ActivityMainBinding {
+        return ActivityMainBinding.inflate(layoutInflater)
+    }
+
+    override fun setupViewModel() {
+    }
+
+    override fun setupUI(savedInstanceState: Bundle?) {
         setupWebView(URL_LINK_WEBSITE)
-        setupShowAdsBanner(mainBinding.adsView.adsPhoneTabSpecialSmartBanner)
+        setupShowAdsBanner(binding.adsView.adsPhoneTabSpecialSmartBanner)
         setupShowAdsInterstitial()
     }
 
     private fun setupWebView(url: String){
-        mainBinding.mainWebview.apply {
+        binding.mainWebview.apply {
             settings.loadsImagesAutomatically = true
             settings.javaScriptEnabled = true
             settings.domStorageEnabled = true
