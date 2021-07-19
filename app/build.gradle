@@ -9,7 +9,7 @@ android {
 
     def appDomain = "com"
     def appDevConsole = "frogobox"
-    def appName = "basewebview"
+    def appName = "webview"
 
     def projectApplicationId = "$appDomain.$appDevConsole.$appName"
     def projectVersionCode = (versionMajor * 100) + (versionMinor * 10) + (versionPatch * 1)
@@ -21,7 +21,7 @@ android {
     def projectKeyPassword = "xeonranger"
 
     // Declaration app name
-    def nameApp = "Base Webview"
+    def nameApp = "Webview"
 
     // Declaration admob id for release
     def releaseAdmobPublisherId = ""
@@ -136,20 +136,20 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'androidx.core:core-ktx:1.5.0'
+    implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "androidx.preference:preference-ktx:1.1.1"
 
     implementation 'com.google.code.gson:gson:2.8.6'
-    implementation 'com.google.android.material:material:1.4.0-beta01'
-    implementation 'com.google.android.gms:play-services-ads:20.1.0'
+    implementation 'com.google.android.material:material:1.5.0-alpha01'
+    implementation 'com.google.android.gms:play-services-ads:20.2.0'
 
-    implementation 'com.github.amirisback:frogo-admob-helper:2.0.1'
-    implementation 'com.github.amirisback:frogo-log:2.0.0'
+    implementation 'com.github.amirisback:frogo-admob:4.0.0'
+    implementation 'com.github.amirisback:frogo-log:2.0.2'
 
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test:runner:1.3.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
 }
