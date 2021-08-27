@@ -6,7 +6,7 @@
 ## ScreenShot Apps
 |ScreenShoot Apps | ScreenShoot Apps | ScreenShoot Apps |
 |:---------------:|:----------------:|:----------------:|
-|<span align="center"><img width="200px" height="360px" src="docs/image/ss_1.png"></span> | <span align="center"><img width="200px" height="360px" src="docs/image/ss_2.png"></span> |<span align="center"><img width="200px" height="360px" src="docs/image/ss_3.png"></span> |
+|<img width="200px" height="360px" src="docs/image/ss_1.png"> | <img width="200px" height="360px" src="docs/image/ss_2.png"> |<img width="200px" height="360px" src="docs/image/ss_3.png"> |
 
 ## Version Release
 
