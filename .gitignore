@@ -15,8 +15,9 @@ build
 docs/_asset_song_files.csv
 
 built application files
-.apk
-.ap_
+*.apk
+*.ap_
+*.aab
 
 files for the dex VM
 *.dex
