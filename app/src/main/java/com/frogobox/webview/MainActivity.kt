@@ -21,8 +21,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun setupUI(savedInstanceState: Bundle?) {
         setupWebView(URL_LINK_WEBSITE)
-        setupShowAdsBanner(binding.adsView.adsPhoneTabSpecialSmartBanner)
-        setupShowAdsInterstitial()
+        showAdBanner(binding.adsView.adsPhoneTabSpecialSmartBanner)
+        showAdInterstitial(getString(R.string.admob_interstitial))
     }
 
     private fun setupWebView(url: String){

@@ -42,13 +42,6 @@ abstract class BaseActivity<VB : ViewBinding> : FrogoAdmobActivity() {
         setContentView(binding.root)
         setupViewModel()
         setupUI(savedInstanceState)
-        setupAdmob()
-    }
-
-    private fun setupAdmob() {
-        setupAdsPublisher(getString(R.string.admob_publisher_id))
-        setupAdsBanner(getString(R.string.admob_banner))
-        setupAdsInterstitial(getString(R.string.admob_interstitial))
     }
 
     protected fun setupCustomTitleToolbar(title: Int) {
