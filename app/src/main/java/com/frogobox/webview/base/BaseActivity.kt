@@ -1,4 +1,4 @@
-package com.frogobox.webview
+package com.frogobox.webview.base
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.frogobox.webview
+package com.frogobox.webview.base
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.frogobox.webview.R
 import com.google.gson.Gson
 
 /**
@@ -65,7 +66,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
     }
 
     protected fun setupShowAdsInterstitial() {
-        mBaseActivity.setupShowAdsInterstitial()
+        mBaseActivity.showAdInterstitial(getString(R.string.admob_interstitial))
     }
 
     fun <Model> baseNewInstance(argsKey: String, data: Model) {

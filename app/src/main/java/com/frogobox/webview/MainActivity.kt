@@ -1,8 +1,7 @@
 package com.frogobox.webview
 
 import android.os.Bundle
-import android.view.View.SCROLLBARS_INSIDE_OVERLAY
-import android.webkit.WebViewClient
+import com.frogobox.webview.base.BaseActivity
 import com.frogobox.webview.databinding.ActivityMainBinding
 
 
@@ -20,25 +19,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     override fun setupUI(savedInstanceState: Bundle?) {
-        setupWebView(URL_LINK_WEBSITE)
+        binding.mainWebview.loadUrlExt(URL_LINK_WEBSITE)
         showAdBanner(binding.adsView.adsPhoneTabSpecialSmartBanner)
         showAdInterstitial(getString(R.string.admob_interstitial))
-    }
-
-    private fun setupWebView(url: String){
-        binding.mainWebview.apply {
-            settings.loadsImagesAutomatically = true
-            settings.javaScriptEnabled = true
-            settings.domStorageEnabled = true
-
-            settings.setSupportZoom(true)
-            settings.builtInZoomControls = true
-            settings.displayZoomControls = false
-
-            scrollBarStyle = SCROLLBARS_INSIDE_OVERLAY
-            webViewClient = WebViewClient()
-            loadUrl(url)
-        }
     }
 
 }
