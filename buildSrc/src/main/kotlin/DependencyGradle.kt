@@ -1,4 +1,4 @@
-/*
+/**
  * Created by faisalamir on 19/09/21
  * FrogoRecyclerView
  * -----------------------------------------
@@ -11,10 +11,9 @@
  *
  */
 
-object Dependency {
+object DependencyGradle {
 
     // dependencies version
-    const val KOTLIN_VERSION = "1.6.10"
-    const val COMPOSE_VERSION = "1.0.5"
+    const val KOTLIN_VERSION = Version.JetBrains.kotlin
 
 }

@@ -1,4 +1,4 @@
-/*
+/**
  * Created by faisalamir on 19/09/21
  * FrogoRecyclerView
  * -----------------------------------------
@@ -13,33 +13,40 @@
 
 object ProjectSetting {
     // project settings
-    const val NAME_APP = "Frogo WebView"
-    val NAME_APK = NAME_APP.toLowerCase().replace(" ", "-")
+    const val NAME_APP = "WebView"
 
     const val APP_DOMAIN = "com"
     const val APP_PLAY_CONSOLE = "frogobox"
     const val APP_NAME = "webview"
 
+    // Change This
+    // Sample : com.[yourcompanyname].[yourprojectname]
+    // Sample : com.frogobox.webview
+    const val PROJECT_APP_ID = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$APP_NAME"
+
     const val VERSION_MAJOR = 1
     const val VERSION_MINOR = 0
     const val VERSION_PATCH = 0
-
-    const val PROJECT_COMPILE_SDK = 31
-    const val PROJECT_MIN_SDK = 21
-    const val PROJECT_TARGET_SDK = PROJECT_COMPILE_SDK
-
-    const val PROJECT_APP_ID = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$APP_NAME"
-    const val PROJECT_VERSION_CODE = (VERSION_MAJOR * 100) + (VERSION_MINOR * 10) + (VERSION_PATCH * 1)
-    const val PROJECT_VERSION_NAME = "$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH"
-
-    // Declaration apps name debug mode
-    const val debugAttribute = "Development"
-    const val nameAppDebug = "$NAME_APP $debugAttribute"
 
     // Key Store
     const val PLAYSTORE_STORE_FILE = "frogoboxmedia.jks"
     const val PLAYSTORE_STORE_PASSWORD = "amirisback"
     const val PLAYSTORE_KEY_ALIAS = "frogoisback"
     const val PLAYSTORE_KEY_PASSWORD = "amirisback"
+
+    // ---------------------------------------------------------------------------------------------
+
+    const val PROJECT_MIN_SDK = Version.Gradle.minSdk
+    const val PROJECT_COMPILE_SDK = Version.Gradle.compileSdk
+    const val PROJECT_TARGET_SDK = PROJECT_COMPILE_SDK
+
+    val NAME_APK = NAME_APP.lowercase().replace(" ", "-")
+    const val PROJECT_NAME_SPACE = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$APP_NAME"
+    const val PROJECT_VERSION_CODE = (VERSION_MAJOR * 100) + (VERSION_MINOR * 10) + (VERSION_PATCH * 1)
+    const val PROJECT_VERSION_NAME = "$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH"
+
+    // Declaration apps name debug mode
+    const val debugAttribute = "DEV"
+    const val nameAppDebug = "$NAME_APP $debugAttribute"
 
 }
