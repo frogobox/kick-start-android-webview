@@ -93,7 +93,8 @@ android {
 
 dependencies {
 
-    implementation("com.github.amirisback:frogo-admob:5.2.1")
-    implementation("com.github.frogobox:frogo-sdk:2.1.7")
+    implementation(Frogo.ui)
+    implementation(Frogo.sdk)
+    implementation(Frogo.admob)
 
 }
