@@ -22,7 +22,8 @@ object ProjectSetting {
     // Change This
     // Sample : com.[yourcompanyname].[yourprojectname]
     // Sample : com.frogobox.webview
-    const val PROJECT_APP_ID = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$APP_NAME"
+    // const val PROJECT_APP_ID = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$APP_NAME"
+    const val PROJECT_APP_ID = "com.github.amirisback.cool.web.project" // Change With Your Own
 
     const val VERSION_MAJOR = 1
     const val VERSION_MINOR = 0
@@ -34,6 +35,8 @@ object ProjectSetting {
     const val PLAYSTORE_KEY_ALIAS = "frogoisback"
     const val PLAYSTORE_KEY_PASSWORD = "amirisback"
 
+    // ---------------------------------------------------------------------------------------------
+    // Do Not Change This Below
     // ---------------------------------------------------------------------------------------------
 
     const val PROJECT_MIN_SDK = Version.Gradle.minSdk
