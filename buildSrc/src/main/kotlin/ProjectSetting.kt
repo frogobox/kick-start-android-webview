@@ -29,7 +29,7 @@ object ProjectSetting {
     const val VERSION_PATCH = 0
 
     // Key Store
-    const val PLAYSTORE_STORE_FILE = "frogoboxmedia.jks"
+    const val PLAYSTORE_STORE_FILE = "keystore/frogoboxmedia.jks"
     const val PLAYSTORE_STORE_PASSWORD = "amirisback"
     const val PLAYSTORE_KEY_ALIAS = "frogoisback"
     const val PLAYSTORE_KEY_PASSWORD = "amirisback"
