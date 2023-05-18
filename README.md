@@ -19,19 +19,37 @@ What's New??
 ## How To Use / Implement This Project
 
 ### Step 1. Setup Change Project Name APP
+- Change Project Name
 ![ScreenShoot Apps](docs/image/how_to/1.png?raw=true)
 
 ### Step 2. Setup Package Name / APP ID
+- Change Package Name
 ![ScreenShoot Apps](docs/image/how_to/2.png?raw=true)
 
 ### Step 3. Setup KeyStore
+- Change keystore path and password
+- Adding keystore in folder app
 ![ScreenShoot Apps](docs/image/how_to/3.png?raw=true)
 
 ### Step 4. Setup Admob
+- Change Admob ID for release
 ![ScreenShoot Apps](docs/image/how_to/4.png?raw=true)
 
 ### Step 5. Setup Link URL
+- Change Link URL for your website app
 ![ScreenShoot Apps](docs/image/how_to/5.png?raw=true)
+
+### Step 6. Setup Build Variant
+- Change Build Variant to release for upload to playstore
+![ScreenShoot Apps](docs/image/how_to/6.png?raw=true)
+
+### Step 7. Generate Signed AAB
+- Build -> Bundle(s) / APK(s) -> Build Bundle(s)
+![ScreenShoot Apps](docs/image/how_to/7.png?raw=true)
+
+### Step 8. Output AAB
+- Output AAB ready for upload to playstore
+![ScreenShoot Apps](docs/image/how_to/8.png?raw=true)
 
 ## Library
 - frogo-admob [Click Here](https://github.com/amirisback/frogo-admob)
