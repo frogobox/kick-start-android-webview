@@ -52,8 +52,28 @@ What's New??
 ![ScreenShoot Apps](docs/image/how_to/8.png?raw=true)
 
 ## How to build from github
+- For detail please visit [this repository](https://github.com/amirisback/automated-build-android-app-with-github-action)
 
 ### Step 1. Chose tab "Action"
+![ScreenShoot Apps](docs/image/github-action/1.png?raw=true)
+
+### Step 2. Chose workflow "Android CI Generated Artifact"
+![ScreenShoot Apps](docs/image/github-action/2.png?raw=true)
+
+### Step 3. Chose run workflow
+![ScreenShoot Apps](docs/image/github-action/2.png?raw=true)
+
+### Step 4. Waiting for build and download artifact
+![ScreenShoot Apps](docs/image/github-action/3.png?raw=true)
+
+### Step 5. Download artifact
+![ScreenShoot Apps](docs/image/github-action/4.png?raw=true)
+
+### Step 6. Extract artifact
+![ScreenShoot Apps](docs/image/github-action/5.png?raw=true)
+
+### Step 7. Output AAB
+![ScreenShoot Apps](docs/image/github-action/6.png?raw=true)
 
 ## Library
 - frogo-admob [Click Here](https://github.com/amirisback/frogo-admob)
