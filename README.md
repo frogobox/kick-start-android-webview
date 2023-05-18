@@ -51,6 +51,10 @@ What's New??
 - Output AAB ready for upload to playstore
 ![ScreenShoot Apps](docs/image/how_to/8.png?raw=true)
 
+## How to build from github
+
+### Step 1. Chose tab "Action"
+
 ## Library
 - frogo-admob [Click Here](https://github.com/amirisback/frogo-admob)
 - frogo-log [Click Here](https://github.com/amirisback/frogo-log)
