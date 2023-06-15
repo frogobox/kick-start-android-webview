@@ -15,4 +15,16 @@ object ConfigApp {
 
     const val URL_LINK_WEBSITE = "https://github.com/amirisback"
 
+    object Flag {
+
+        /*
+            Flag for toggle ads
+            turn on = true
+            turn off = false
+         */
+
+        const val IS_USING_AD_INTERSTITIAL = true
+        const val IS_USING_AD_BANNER = true
+    }
+
 }
