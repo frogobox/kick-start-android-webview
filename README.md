@@ -75,6 +75,12 @@ What's New??
 ### Step 7. Output AAB
 ![ScreenShoot Apps](docs/image/github-action/6.png?raw=true)
 
+
+## Extras
+
+### Setup Toggle Flag for Enable Ad
+![ScreenShoot Apps](docs/image/how_to/9.png?raw=true)
+
 ## Library
 - frogo-admob [Click Here](https://github.com/amirisback/frogo-admob)
 - frogo-log [Click Here](https://github.com/amirisback/frogo-log)
