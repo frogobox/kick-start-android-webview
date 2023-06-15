@@ -17,13 +17,13 @@
  * 
  -->
 
-<com.google.android.gms.ads.AdView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.gms.ads.AdView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/ads_phone_tab_special_smart_banner"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_centerHorizontal="true"
     android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:visibility="gone"
     ads:adSize="@string/ads_size_smart_banner"
-    ads:adUnitId="@string/admob_banner"/>
+    ads:adUnitId="@string/admob_banner" />
