@@ -2,7 +2,9 @@ package com.frogobox.webview.ui.main
 
 import android.os.Bundle
 import com.frogobox.sdk.ext.gone
+import com.frogobox.sdk.ext.showLogD
 import com.frogobox.sdk.ext.visible
+import com.frogobox.webview.ConfigApp
 import com.frogobox.webview.ConfigApp.URL_LINK_WEBSITE
 import com.frogobox.webview.common.callback.AdCallback
 import com.frogobox.webview.common.callback.WebViewCallback
@@ -19,7 +21,15 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun onCreateExt(savedInstanceState: Bundle?) {
         super.onCreateExt(savedInstanceState)
-        setupAd()
+        setupFlagAd()
+    }
+
+    private fun setupFlagAd() {
+        if (ConfigApp.Flag.IS_USING_AD_INTERSTITIAL) {
+            setupAd()
+        } else {
+            setupUI()
+        }
     }
 
     private fun setupAd() {
@@ -59,11 +69,16 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
                 override fun onFinish() {
                     containerFailedView.failedView.gone()
-                    showAdBanner(adsView.adsPhoneTabSpecialSmartBanner)
+                    if (ConfigApp.Flag.IS_USING_AD_BANNER) {
+                        showAdBanner(adsView.adsPhoneTabSpecialSmartBanner)
+                    } else {
+                        adsView.adsPhoneTabSpecialSmartBanner.gone()
+                    }
                 }
 
                 override fun onFailed() {
-                    containerFailedView.failedView.visible()
+                    // Activate this if you want failed view
+                    // containerFailedView.failedView.visible()
                 }
 
             })

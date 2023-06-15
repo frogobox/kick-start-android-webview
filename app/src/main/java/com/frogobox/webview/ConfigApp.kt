@@ -15,4 +15,9 @@ object ConfigApp {
 
     const val URL_LINK_WEBSITE = "https://github.com/amirisback"
 
+    object Flag {
+        const val IS_USING_AD_INTERSTITIAL = false
+        const val IS_USING_AD_BANNER = false
+    }
+
 }
