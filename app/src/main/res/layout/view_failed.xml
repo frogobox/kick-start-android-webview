@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Internal Server Error"
-            android:textColor="@color/frogoColorBlack"
+            android:textColor="@color/tv_text_color"
             android:textSize="@dimen/frogo_dimen_font_16sp" />
 
     </LinearLayout>

@@ -68,6 +68,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 override fun onFinish() {
                     containerFailedView.failedView.gone()
                     if (ConfigApp.Flag.IS_USING_AD_BANNER) {
+                        adsView.adsPhoneTabSpecialSmartBanner.visible()
                         showAdBanner(adsView.adsPhoneTabSpecialSmartBanner)
                     } else {
                         adsView.adsPhoneTabSpecialSmartBanner.gone()
