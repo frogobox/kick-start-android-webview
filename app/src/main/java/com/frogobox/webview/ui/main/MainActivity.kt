@@ -2,7 +2,6 @@ package com.frogobox.webview.ui.main
 
 import android.os.Bundle
 import com.frogobox.sdk.ext.gone
-import com.frogobox.sdk.ext.showLogD
 import com.frogobox.sdk.ext.visible
 import com.frogobox.webview.ConfigApp
 import com.frogobox.webview.ConfigApp.URL_LINK_WEBSITE
@@ -54,9 +53,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         })
     }
 
-    private fun setupUI() {
+    private fun setupLoadWeb() {
         binding.apply {
-
             mainWebview.loadUrlExt(URL_LINK_WEBSITE, object : WebViewCallback {
 
                 override fun onShowProgress() {
@@ -78,11 +76,24 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
                 override fun onFailed() {
                     // Activate this if you want failed view
-                    // containerFailedView.failedView.visible()
+                    containerFailedView.failedView.visible()
                 }
 
             })
         }
+    }
+
+    private fun setupUI() {
+        binding.apply {
+
+            containerFailedView.ivClose.setOnClickListener {
+                containerFailedView.failedView.gone()
+                setupLoadWeb()
+            }
+
+            setupLoadWeb()
+        }
+
     }
 
 }
