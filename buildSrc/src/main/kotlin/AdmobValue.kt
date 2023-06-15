@@ -14,9 +14,9 @@
 object AdmobValue {
 
     // Declaration admob id for release
-    const val APP_ID = ""
-    const val BANNER = ""
-    const val INTERSTITIAL = ""
+    const val APP_ID = "" // *Required
+    const val BANNER = "" // *Required
+    const val INTERSTITIAL = "" // *Required
 
     object Debug {
         // Declaration admob id for debug
