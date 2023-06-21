@@ -13,5 +13,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="tv_text_color">@color/frogoColorBlack</color>
+    <color name="colorButtonText">@color/frogoColorWhite</color>
 
 </resources>

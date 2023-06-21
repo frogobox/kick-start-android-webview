@@ -1,8 +1,12 @@
 package com.frogobox.webview.ui.main
 
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
+import com.frogobox.coresdk.util.FrogoConstant
 import com.frogobox.sdk.ext.gone
+import com.frogobox.sdk.ext.startActivityExtOpenApp
 import com.frogobox.sdk.ext.visible
+import com.frogobox.webview.BuildConfig
 import com.frogobox.webview.ConfigApp
 import com.frogobox.webview.ConfigApp.URL_LINK_WEBSITE
 import com.frogobox.webview.common.callback.AdCallback
@@ -10,6 +14,7 @@ import com.frogobox.webview.common.callback.WebViewCallback
 import com.frogobox.webview.common.core.BaseActivity
 import com.frogobox.webview.common.ext.loadUrlExt
 import com.frogobox.webview.databinding.ActivityMainBinding
+import com.frogobox.webview.databinding.DialogRatingAppBinding
 
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
@@ -21,6 +26,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onCreateExt(savedInstanceState: Bundle?) {
         super.onCreateExt(savedInstanceState)
         setupFlagAd()
+    }
+
+    override fun doOnBackPressedExt() {
+        showDialog()
     }
 
     private fun setupFlagAd() {
@@ -97,6 +106,28 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             setupLoadWeb()
         }
 
+    }
+
+    private fun showDialog() {
+        val dialogBinding = DialogRatingAppBinding.inflate(layoutInflater, null, false)
+        val dialogBuilder = AlertDialog.Builder(this)
+        dialogBuilder.setView(dialogBinding.root)
+
+        dialogBinding.apply {
+            btnRate.setOnClickListener { rateApp() }
+            btnExit.setOnClickListener { exitApp() }
+        }
+
+        val alertDialog = dialogBuilder.create()
+        alertDialog.show()
+    }
+
+    private fun rateApp() {
+        startActivityExtOpenApp("${FrogoConstant.Url.BASE_PLAY_STORE_URL}${BuildConfig.APPLICATION_ID}")
+    }
+
+    private fun exitApp() {
+        finishAffinity()
     }
 
 }

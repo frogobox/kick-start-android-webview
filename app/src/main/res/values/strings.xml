@@ -1,3 +1,9 @@
 <resources>
 
+    <string name="activity_exit_tv_exit_title">Are you sure you want to exit?</string>
+    <string name="activity_exit_btn_exit">Exit</string>
+    <string name="activity_exit_btn_share">Share</string>
+    <string name="activity_exit_btn_rate">Rate</string>
+    <string name="activity_exit_btn_back">Back</string>
+
 </resources>
