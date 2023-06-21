@@ -15,6 +15,4 @@ import com.frogobox.sdk.FrogoApplication
 
 class WebApp : FrogoApplication() {
 
-
-
 }
