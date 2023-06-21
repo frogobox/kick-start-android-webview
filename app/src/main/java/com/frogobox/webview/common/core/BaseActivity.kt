@@ -1,10 +1,21 @@
 package com.frogobox.webview.common.core
 
+import android.app.Activity
 import androidx.viewbinding.ViewBinding
 import com.frogobox.admob.callback.FrogoAdmobInterstitialCallback
+import com.frogobox.admob.core.IFrogoAdConsent
 import com.frogobox.admob.ui.FrogoAdmobBindActivity
+import com.frogobox.coresdk.util.FrogoConstant
+import com.frogobox.sdk.delegate.piracy.FrogoPiracyCallback
+import com.frogobox.sdk.delegate.piracy.FrogoPiracyDialogCallback
+import com.frogobox.sdk.delegate.piracy.PiracyDelegates
+import com.frogobox.sdk.delegate.piracy.PiracyDelegatesImpl
+import com.frogobox.sdk.delegate.piracy.util.PiracyMessage
+import com.frogobox.sdk.ext.startActivityExtOpenApp
+import com.frogobox.webview.BuildConfig
 import com.frogobox.webview.R
 import com.frogobox.webview.common.callback.AdCallback
+import com.google.android.ump.FormError
 
 /**
  * Created by Faisal Amir on 24/10/22
@@ -17,7 +28,32 @@ import com.frogobox.webview.common.callback.AdCallback
  */
 
 
-abstract class BaseActivity<VB : ViewBinding> : FrogoAdmobBindActivity<VB>() {
+abstract class BaseActivity<VB : ViewBinding> : FrogoAdmobBindActivity<VB>(),
+    PiracyDelegates by PiracyDelegatesImpl() {
+
+    override fun setupDebugMode(): Boolean {
+        return BuildConfig.DEBUG
+    }
+
+    override fun setupDelegates() {
+        super.setupDelegates()
+        setupPiracyDelegate(this, this)
+        setupPiracyDelegatesDebug(setupDebugMode())
+    }
+
+    override fun setupPiracyMode() {
+        connectPiracyChecker(object : FrogoPiracyCallback {
+            override fun doOnPirated(message: PiracyMessage) {
+
+                showPiracedDialog(message, object : FrogoPiracyDialogCallback {
+                    override fun doOnPirated(message: PiracyMessage) {
+                        startActivityExtOpenApp("${FrogoConstant.Url.BASE_PLAY_STORE_URL}$packageName")
+                    }
+
+                })
+            }
+        })
+    }
 
     protected fun showInterstitial(callback: AdCallback) {
         showAdInterstitial(getString(R.string.admob_interstitial),
@@ -43,6 +79,32 @@ abstract class BaseActivity<VB : ViewBinding> : FrogoAdmobBindActivity<VB>() {
                     callback.onFailed()
                 }
             })
+    }
+
+    fun showUMP(activity: Activity, onAccept: () -> Unit) {
+        showAdConsent(object : IFrogoAdConsent {
+
+            override fun activity(): Activity {
+                return activity
+            }
+
+            override fun isDebug(): Boolean {
+                return BuildConfig.DEBUG
+            }
+
+            override fun isUnderAgeAd(): Boolean {
+                return false
+            }
+
+            override fun onConsentSuccess() {
+                onAccept()
+            }
+
+            override fun onConsentError(formError: FormError) {
+                onAccept()
+            }
+
+        })
     }
 
 }

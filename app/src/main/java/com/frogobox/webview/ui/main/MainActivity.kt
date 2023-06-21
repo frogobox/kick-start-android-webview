@@ -24,10 +24,12 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     private fun setupFlagAd() {
-        if (ConfigApp.Flag.IS_USING_AD_INTERSTITIAL) {
-            setupAd()
-        } else {
-            setupUI()
+        showUMP(this) {
+            if (ConfigApp.Flag.IS_USING_AD_INTERSTITIAL) {
+                setupAd()
+            } else {
+                setupUI()
+            }
         }
     }
 
