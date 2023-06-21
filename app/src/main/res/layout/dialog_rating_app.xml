@@ -35,7 +35,7 @@
         android:text="@string/activity_exit_tv_exit_title"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="@dimen/frogo_dimen_font_24sp" />
+        android:textSize="@dimen/frogo_dimen_font_20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -58,10 +58,10 @@
             android:id="@+id/btn_exit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@drawable/bg_btn_image"
             android:paddingBottom="@dimen/frogo_dimen_4dp"
             android:text="@string/activity_exit_btn_exit"
-            android:layout_weight="1"
             android:textColor="@color/colorButtonText"
             android:textSize="@dimen/frogo_dimen_font_20sp" />
 

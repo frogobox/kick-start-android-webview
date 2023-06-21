@@ -25,6 +25,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun onCreateExt(savedInstanceState: Bundle?) {
         super.onCreateExt(savedInstanceState)
+        showUMP(this) {
+            setupFlagAd()
+        }
         setupFlagAd()
     }
 
@@ -33,12 +36,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     private fun setupFlagAd() {
-        showUMP(this) {
-            if (ConfigApp.Flag.IS_USING_AD_INTERSTITIAL) {
-                setupAd()
-            } else {
-                setupUI()
-            }
+        if (ConfigApp.Flag.IS_USING_AD_INTERSTITIAL) {
+            setupAd()
+        } else {
+            setupUI()
         }
     }
 
