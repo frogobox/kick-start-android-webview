@@ -100,6 +100,10 @@ abstract class BaseActivity<VB : ViewBinding> : FrogoAdmobBindActivity<VB>(),
                 onAccept()
             }
 
+            override fun onNotUsingAdConsent() {
+                onAccept()
+            }
+
             override fun onConsentError(formError: FormError) {
                 onAccept()
             }
