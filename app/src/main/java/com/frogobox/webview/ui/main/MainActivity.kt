@@ -89,7 +89,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
                 override fun onFailed() {
                     // Activate this if you want failed view
-                    containerFailedView.failedView.visible()
+                    // containerFailedView.failedView.visible()
                 }
 
             })
