@@ -2,9 +2,9 @@ package com.frogobox.webview.common.core
 
 import android.app.Activity
 import androidx.viewbinding.ViewBinding
-import com.frogobox.admob.callback.FrogoAdmobInterstitialCallback
-import com.frogobox.admob.core.IFrogoAdConsent
-import com.frogobox.admob.ui.FrogoAdmobBindActivity
+import com.frogobox.ads.callback.FrogoAdmobInterstitialCallback
+import com.frogobox.ads.core.IFrogoAdConsent
+import com.frogobox.ads.ui.FrogoAdmobBindActivity
 import com.frogobox.coresdk.util.FrogoConstant
 import com.frogobox.sdk.delegate.piracy.FrogoPiracyCallback
 import com.frogobox.sdk.delegate.piracy.FrogoPiracyDialogCallback
@@ -12,9 +12,9 @@ import com.frogobox.sdk.delegate.piracy.PiracyDelegates
 import com.frogobox.sdk.delegate.piracy.PiracyDelegatesImpl
 import com.frogobox.sdk.delegate.piracy.util.PiracyMessage
 import com.frogobox.sdk.ext.startActivityExtOpenApp
-import com.frogobox.webview.BuildConfig
 import com.frogobox.webview.R
 import com.frogobox.webview.common.callback.AdCallback
+import com.frogobox.webview.common.ext.APP_IS_DEBUG
 import com.google.android.ump.FormError
 
 /**
@@ -32,7 +32,7 @@ abstract class BaseActivity<VB : ViewBinding> : FrogoAdmobBindActivity<VB>(),
     PiracyDelegates by PiracyDelegatesImpl() {
 
     override fun setupDebugMode(): Boolean {
-        return BuildConfig.DEBUG
+        return APP_IS_DEBUG
     }
 
     override fun setupDelegates() {
@@ -89,7 +89,7 @@ abstract class BaseActivity<VB : ViewBinding> : FrogoAdmobBindActivity<VB>(),
             }
 
             override fun isDebug(): Boolean {
-                return BuildConfig.DEBUG
+                return APP_IS_DEBUG
             }
 
             override fun isUnderAgeAd(): Boolean {

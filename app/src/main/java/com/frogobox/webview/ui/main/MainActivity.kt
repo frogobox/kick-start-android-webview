@@ -6,12 +6,12 @@ import com.frogobox.coresdk.util.FrogoConstant
 import com.frogobox.sdk.ext.gone
 import com.frogobox.sdk.ext.startActivityExtOpenApp
 import com.frogobox.sdk.ext.visible
-import com.frogobox.webview.BuildConfig
 import com.frogobox.webview.ConfigApp
 import com.frogobox.webview.ConfigApp.URL_LINK_WEBSITE
 import com.frogobox.webview.common.callback.AdCallback
 import com.frogobox.webview.common.callback.WebViewCallback
 import com.frogobox.webview.common.core.BaseActivity
+import com.frogobox.webview.common.ext.APP_ID
 import com.frogobox.webview.common.ext.loadUrlExt
 import com.frogobox.webview.databinding.ActivityMainBinding
 import com.frogobox.webview.databinding.DialogRatingAppBinding
@@ -124,7 +124,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     private fun rateApp() {
-        startActivityExtOpenApp("${FrogoConstant.Url.BASE_PLAY_STORE_URL}${BuildConfig.APPLICATION_ID}")
+        startActivityExtOpenApp("${FrogoConstant.Url.BASE_PLAY_STORE_URL}${APP_ID}")
     }
 
     private fun exitApp() {
