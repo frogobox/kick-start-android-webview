@@ -7,7 +7,7 @@ import com.frogobox.sdk.ext.gone
 import com.frogobox.sdk.ext.startActivityExtOpenApp
 import com.frogobox.sdk.ext.visible
 import com.frogobox.webview.ConfigApp
-import com.frogobox.webview.ConfigApp.URL_LINK_WEBSITE
+import com.frogobox.webview.ConfigApp.URL_WEB
 import com.frogobox.webview.common.callback.AdCallback
 import com.frogobox.webview.common.callback.WebViewCallback
 import com.frogobox.webview.common.core.BaseActivity
@@ -32,7 +32,12 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     }
 
     override fun doOnBackPressedExt() {
-        showDialog()
+        if (binding.mainWebview.canGoBack()) {
+            binding.mainWebview.goBack()
+        } else {
+            showDialog()
+        }
+
     }
 
     private fun setupFlagAd() {
@@ -67,7 +72,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private fun setupLoadWeb() {
         binding.apply {
-            mainWebview.loadUrlExt(URL_LINK_WEBSITE, object : WebViewCallback {
+            mainWebview.loadUrlExt(url = URL_WEB, callback = object : WebViewCallback {
 
                 override fun onShowProgress() {
                     containerProgressView.progressView.visible()

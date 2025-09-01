@@ -20,9 +20,9 @@ object ProjectSetting {
     // Sample : com.frogobox.webview
     const val PROJECT_APP_ID = "com.github.amirisback.web" // Change With Your Own
 
-    const val VERSION_MAJOR = 1
+    const val VERSION_MAJOR = 2
     const val VERSION_MINOR = 0
-    const val VERSION_PATCH = 0
+    const val VERSION_PATCH = 1
 
     // Key Store
     const val PLAYSTORE_STORE_FILE = "keystore/frogoboxmedia.jks"
