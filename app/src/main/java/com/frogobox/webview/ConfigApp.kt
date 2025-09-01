@@ -1,5 +1,7 @@
 package com.frogobox.webview
 
+import com.frogobox.webview.ui.util.sampleHtmlText
+
 /**
  * Created by Faisal Amir on 24/10/22
  * -----------------------------------------
@@ -14,6 +16,10 @@ package com.frogobox.webview
 object ConfigApp {
 
     const val URL_LINK_WEBSITE = "https://github.com/amirisback"
+    const val URL_LINK_DATA = sampleHtmlText
+
+    const val URL_WEB = URL_LINK_WEBSITE
+
 
     object Flag {
 
