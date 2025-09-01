@@ -7,7 +7,6 @@ import com.frogobox.sdk.ext.gone
 import com.frogobox.sdk.ext.startActivityExtOpenApp
 import com.frogobox.sdk.ext.visible
 import com.frogobox.webview.ConfigApp
-import com.frogobox.webview.ConfigApp.URL_LINK_DATA
 import com.frogobox.webview.ConfigApp.URL_WEB
 import com.frogobox.webview.common.callback.AdCallback
 import com.frogobox.webview.common.callback.WebViewCallback

@@ -15,9 +15,19 @@ import com.frogobox.webview.ui.util.sampleHtmlText
 
 object ConfigApp {
 
+    /**
+     * Link for your Website
+     */
     const val URL_LINK_WEBSITE = "https://github.com/amirisback"
+
+    /**
+     * Inline your html text string
+     */
     const val URL_LINK_DATA = sampleHtmlText
 
+    /**
+     * Set Your Server Domain
+     */
     const val URL_WEB = URL_LINK_WEBSITE
 
 
